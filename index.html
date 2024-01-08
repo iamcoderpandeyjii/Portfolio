@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha384-r3YieVnHOdYyim3yeDHP0WY6qyyiVpM6cq2QMYwE9lTuiD9dX2WlFg3NEmES9SZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS code goes here */
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Bhasker Pandey
+                </h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <div class="intro">
+                <h2>Hello, I'm Bhasker Pandey</h2>
+                <p>I'm a web developer and cloud Engineer with 1 years of experience.</p>
+                <a href="#contact" class="btn">Hire Me</a>
+            </div>
+        </section>
+        <section id="portfolio">
+            <div class="container">
+                <h3>My Portfolio</h3>
+                <div class="projects">
+                    <div class="project">
+                        <img src="restaurant.jpg" alt="Project 1">
+                        <div class="project-info">
+                            <h4>Project 1 - Ongoing Project</h4>
+                            <p>A website for a restaurant.</p>
+                            <a href="#" class="btn">View More</a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="travel agency.jpg" alt="Project 2">
+                        <div class="project-info">
+                            <h4>Project 2 - Ongoing Project</h4>
+                            <p>A website for a travel agency.</p>
+                            <a href="#" class="btn">View More</a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="blog.jpg" alt="Project 3">
+                        <div class="project-info">
+                            <h4>Project 3 - Ongoing Project</h4>
+                            <p>A website for a blog.</p>
+                            <a href="#" class="btn">View More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <div class="container">
+                <h3>About Me</h3>
+                <div class="about-info">
+                    <div class="about-img">
+                        <img src="myphoto.jpg" alt="My Photo">
+                    </div>
+                    <div class="about-text">
+                        <p>Hi, I'm Bhasker Pandey, a web developer and cloud Engineer based in India. I have 1 years of
+                            experience in creating websites using HTML, CSS, and JavaScript. I also have knowledge of
+                            frameworks like Bootstrap, React, and Angular. I love to learn new technologies and create
+                            beautiful and functional websites.</p>
+                        <p>Some of my skills are:</p>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Bootstrap</li>
+                            <li>React</li>
+                            <li>Angular</li>
+                        </ul>
+                        <a href="#" class="btn">Download CV</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <h3>Contact Me</h3>
+                <div class="contact-info">
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> MPH Hostel, Near L1 Coaching, Durgakund, Varanasi.</p>
+                        <p><i class="fas fa-phone"></i> +91 8429637626</p>
+                        <p><i class="fas fa-envelope"></i> cybersquard@duck.com</p>
+                    </div>
+                    <div class="contact-form">
+                        <form id="form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" placeholder="Enter your message"
+                                    required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" id="submit" class="btn">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>© 2024 cyb.ersquard. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/iam_coder_pandey_jii/" target="_blank"><img src="./instagram.png"
+                        alt=""></a>
+                <a href="https://www.instagram.com/cyb.ersquard/" target="_blank"><img src="./instagram.png"></a>
+                <a href="https://www.youtube.com/@CyberSquard" target="_blank"><img src="./youtube.png"></a>
+                <!-- <a href="www.linkedin.com/in/bhasker-pandey" target="_blank"><img src="./linkedin.png"></a> -->
+                <!-- <a href="#" target="_blank"><img src="./github.png"></img></a> -->
+
+            </div>
+        </div>
+    </footer>
+    <script https://smtpjs.com/v3/smtp.js></script>
+    <script>
+        function sendEmail(){
+        Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "iamcoderpandeyjii@gmail.com",
+            Password: "",
+            To: 'iamcoderpandeyjii@gmail.com',
+            From: document.getElementById("email").value,
+            Subject: "This is the subject",
+            Body: "And this is the body"
+        }).then(
+            message => alert("message sent succesfully")
+        );
+    }
+    </script>
+</body>
+
+</html>
