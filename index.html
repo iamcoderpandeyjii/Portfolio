@@ -47,6 +47,7 @@
                         <img src="restaurant.jpg" alt="Project 1">
                         <div class="project-info">
                             <h4>Project 1 - Ongoing Project</h4>
+                            <p>Project Update - live till 28-02-2026
                             <p>A website for a restaurant.</p>
                             <a href="#" class="btn">View More</a>
                         </div>
@@ -101,7 +102,7 @@
                 <h3>Contact Me</h3>
                 <div class="contact-info">
                     <div class="contact-details">
-                        <p><i class="fas fa-map-marker-alt"></i> Laxmi Wel-fare Soc., Near Vidya Varidhi Vidyalaya, Santosh Bhuvan NSP (East).</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Laxmi Wel-fare Soc., Near Vidya Varidhi Vidyalaya, Santosh Bhuvan NSP (EAST).</p>
                         <p><i class="fas fa-phone"></i> +91 8429637626</p>
                         <p><i class="fas fa-envelope"></i> cybersquard@duck.com</p>
                     </div>
@@ -143,22 +144,28 @@
             </div>
         </div>
     </footer>
-    <script https://smtpjs.com/v3/smtp.js></script>
     <script>
-        function sendEmail(){
-        Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "iamcoderpandeyjii@gmail.com",
-            Password: "",
-            To: 'iamcoderpandeyjii@gmail.com',
-            From: document.getElementById("email").value,
-            Subject: "This is the subject",
-            Body: "And this is the body"
-        }).then(
-            message => alert("message sent succesfully")
-        );
-    }
-    </script>
+    (function () {
+      emailjs.init("zbdu6gmeHeLlloj9f");
+    })();
+
+    const form = document.getElementById("contact-form");
+    const toast = document.getElementById("toast");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      emailjs.sendForm("service_kmv779h", "template_6tls0ks", this)
+        .then(() => {
+          toast.style.display = "block";
+          setTimeout(() => toast.style.display = "none", 3000);
+          form.reset();
+        });
+    });
+
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+    });
+  </script>
 </body>
 
 </html>
