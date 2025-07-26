@@ -104,36 +104,72 @@ main {
 }
 
 /* Contact section styles */
-.contact-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Contact Section */
+.contact {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
 }
 
 .contact-form {
-    max-width: 500px;
-    width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.form-group {
-    margin-bottom: 20px;
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.contact-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-button {
-    cursor: pointer;
+.contact-form button:hover {
+  background-color: #0056b3;
 }
+
+/* Toast Message */
+#toast {
+  max-width: 300px;
+  margin: 20px auto 0;
+  padding: 15px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  font-weight: 500;
+  display: none;
+  animation: fadeInOut 4s ease-in-out;
+}
+
 
 /* Footer styles */
 footer {
