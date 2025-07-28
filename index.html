@@ -246,8 +246,59 @@
     }
   });
 
+
+  //Intregate Email js
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+  // Initialize EmailJS with your public key
+  emailjs.init('zbdu6gmeHeLlloj9f');  // <-- Replace with your public key
+
+  const form = document.getElementById('contact-form');
+  const btn = form.querySelector('button[type="submit"]');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    // Prepare your service ID and template IDs
+    const serviceID = 'service_kmv779h';             // Your EmailJS service ID
+    const templateOwnerID = 'template_6tls0ks';        // Template for website owner notification
+    const templateSenderID = 'template_xbtksyg';      // Template for sender confirmation
+
+    // Collect form data
+    const formData = {
+      user_name: form.user_name.value,
+      user_email: form.user_email.value,
+      subject: form.subject.value,
+      message: form.message.value,
+    };
+
+    // Send email to website owner
+    emailjs.send(serviceID, templateOwnerID, formData)
+      .then(() => {
+        // After owner's email sent, send confirmation to sender
+        return emailjs.send(serviceID, templateSenderID, formData);
+      })
+      .then(() => {
+        alert('Message sent successfully! A confirmation email has been sent to you.');
+        form.reset();
+      })
+      .catch((error) => {
+        console.error('Failed to send emails:', error);
+        alert('Oops! Something went wrong. Please try again later.');
+      })
+      .finally(() => {
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+      });
+  });
+</script>
+
   // Initialize EmailJS with your Public Key (replace with your real key)
-  emailjs.init('zbdu6gmeHeLlloj9f');
+  /*emailjs.init('zbdu6gmeHeLlloj9f');
 
   // Contact form handling
   const btn = document.querySelector('#contact button[type="submit"]');
@@ -273,7 +324,7 @@
         btn.disabled = false;
         alert('Failed to send email:\n' + JSON.stringify(err));
       });
-  });
+  }); */
 
   // Smooth scroll for navigation links with anchors
   document.addEventListener('DOMContentLoaded', function() {
