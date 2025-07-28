@@ -1,174 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    crossorigin="anonymous" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhasker Pandey | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
   <header>
     <nav>
-      <div class="logo">
-        <h1>Bhasker Pandey</h1>
-      </div>
-      <div class="menu">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+      <span class="logo">★</span>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-side">
+        <a href="#contact" class="cta">Book Appointment</a>
+        <span class="year">2025</span>
       </div>
     </nav>
   </header>
 
-  <main>
-    <section id="home">
-      <div class="intro">
-        <h2>Hello, I'm Bhasker Pandey</h2>
-        <p>I'm a web developer and cloud engineer with 1 year of experience.</p>
-        <a href="#contact" class="btn">Hire Me</a>
-      </div>
-    </section>
+<section id="hero" class="hero reveal">
+  <div class="hero-content">
+    <div class="stats">
+      <div class="stat"><span class="stat-num" id="exp-year">3</span><br><span class="stat-label">Year Experience</span></div>
+      <div class="stat"><span class="stat-num" id="proj-num">6</span><br><span class="stat-label">Projects</span></div>
+    </div>
+    <h1><span style="color:#4460aa;">Hello,</span> I'm <strong>Bhasker Pandey</strong></h1>
+    <p class="tagline">— Web Developer &amp; Cloud Engineer</p>
+    <p class="bio">Crafting fast, beautiful, and robust web solutions for clients worldwide.</p>
+    <a href="#portfolio" class="cta hero-cta">See My Work</a>
+    <div class="hero-socials">
+      <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <!-- Add more if needed -->
+    </div>
+    <div class="scroll-hint animated-bounce">Scroll down ↓</div>
+  </div>
+  <div class="hero-image">
+    <img src="myphoto.JPG" alt="Portrait of Bhasker Pandey" class="profile-animated" />
+  </div>
+</section>
 
-    <section id="portfolio">
-      <div class="container">
-        <h3>My Portfolio</h3>
-        <div class="projects">
-          <div class="project">
-            <img src="restaurant.jpg" alt="Restaurant Website" />
-            <div class="project-info">
-              <h4>Project 1 - Ongoing Project</h4>
-              <p>Project Update - live till 28-02-2026</p>
-              <p>A website for a restaurant.</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-          </div>
-          <div class="project">
-            <img src="travel agency.jpg" alt="Travel Agency Website" />
-            <div class="project-info">
-              <h4>Project 2 - Ongoing Project</h4>
-              <p>A website for a travel agency.</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-          </div>
-          <div class="project">
-            <img src="blog.jpg" alt="Blog Website" />
-            <div class="project-info">
-              <h4>Project 3 - Ongoing Project</h4>
-              <p>A website for a blog.</p>
-              <a href="#" class="btn">View More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section id="about">
-      <div class="container">
-        <h3>About Me</h3>
-        <div class="about-info">
-          <div class="about-img">
-            <img src="myphoto.JPG" alt="Bhasker Pandey" />
-          </div>
-          <div class="about-text">
-            <p>Hi, I'm Bhasker Pandey, a web developer and cloud engineer based in India. I have 1 year of experience in
-              creating websites using HTML, CSS, and JavaScript. I also have knowledge of frameworks like Bootstrap,
-              React, and Angular. I love to learn new technologies and create beautiful and functional websites.</p>
-            <p>Some of my skills are:</p>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>Bootstrap</li>
-              <li>React</li>
-              <li>Angular</li>
-            </ul>
-            <a href="#" class="btn">Download CV</a>
-          </div>
-        </div>
-      </div>
-    </section>
+<section id="portfolio" class="reveal">
+  <h2>My Portfolio</h2>
+  <div class="portfolio-grid">
+    <div class="project-card">
+      <h3>Restaurant Website</h3>
+      <p><strong>Status:</strong> Ongoing Project (live till 28-02-2026)</p>
+      <p>A responsive, modern website for a local restaurant featuring online menus, reservation system, and customer reviews.</p>
+      <button onclick="window.open('https://example.com/project-restaurant', '_blank')">View More</button>
+    </div>
+    <div class="project-card">
+      <h3>Travel Agency Portal</h3>
+      <p><strong>Status:</strong> Ongoing Project</p>
+      <p>Developed a travel booking portal with dynamic itineraries, real-time availability, and customer management tools.</p>
+      <button onclick="window.open('https://example.com/project-travel', '_blank')">View More</button>
+    </div>
+    <div class="project-card">
+      <h3>Blog Platform</h3>
+      <p><strong>Status:</strong> Ongoing Project</p>
+      <p>A CMS-powered blog website with rich text formatting, user comments, and SEO optimization.</p>
+      <button onclick="window.open('https://example.com/project-blog', '_blank')">View More</button>
+    </div>
+    <div class="project-card">
+      <h3>Weather App</h3>
+      <p><strong>Status:</strong> Completed</p>
+      <p>Interactive weather app using OpenWeatherMap API providing hourly and weekly forecasts with geolocation support.</p>
+      <button onclick="window.open('https://example.com/project-weather', '_blank')">View More</button>
+    </div>
+    <div class="project-card">
+      <h3>Amazon Clone</h3>
+      <p><strong>Status:</strong> Completed</p>
+      <p>Full-stack e-commerce platform mimicking Amazon’s key features: product catalog, cart, user authentication, and payments.</p>
+      <button onclick="window.open('https://example.com/project-amazon', '_blank')">View More</button>
+    </div>
+    <div class="project-card">
+      <h3>Markdown Blog</h3>
+      <p><strong>Status:</strong> Completed</p>
+      <p>A clean blog site built with Markdown content support and static site generation for fast performance.</p>
+      <button onclick="window.open('https://example.com/project-markdown-blog', '_blank')">View More</button>
+    </div>
+  </div>
+</section>
 
-    <section id="contact">
-      <div class="container">
-        <h3>Contact Me</h3>
-        <div class="contact-info">
-          <div class="contact-details">
-            <p><i class="fas fa-map-marker-alt"></i> Laxmi Wel-fare Soc., Near Vidya Varidhi Vidyalaya, Santosh Bhuvan NSP (EAST).</p>
-            <p><i class="fas fa-phone"></i> +91 8429637626</p>
-            <p><i class="fas fa-envelope"></i> cybersquard@duck.com</p>
-          </div>
-          <section id="contact" class="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form id="contact-form" class="contact-form">
-        <input type="text" name="user_name" placeholder="Your Name" required />
-        <input type="email" name="user_email" placeholder="Your Email" required />
-        <input type="text" name="subject" placeholder="Subject" required />
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
 
-            <!-- Toast Message -->
-            <div id="toast" style="display: none; margin-top: 10px; padding: 12px; background: #4CAF50; color: white;">
-              Message sent successfully!
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+<section id="about" class="reveal">
+  <h2>About Me</h2>
+  <div class="about-container">
+    <img src="myphoto.JPG" alt="Bhasker Pandey" class="about-photo" />
+    <div class="about-content">
+      <p>
+        Hi, I’m <strong>Bhasker Pandey</strong>, a passionate web developer and cloud engineer based in India.
+        With 3 year of experience building websites using HTML, CSS, and JavaScript,
+        I specialize in creating beautiful, functional, and user-friendly digital experiences.
+        I am also skilled in frameworks including Bootstrap, React, and Angular.
+      </p>
+      <h3>Skills</h3>
+      <ul class="skills-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Bootstrap</li>
+        <li>React</li>
+        <li>Angular</li>
+      </ul>
+      <a href="your-cv.pdf" class="cta about-cta" download>Download CV</a>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    <div class="container">
-      <p>© 2024 cyb.ersquard. All rights reserved.</p>
+
+  <section id="contact" class="reveal">
+  <h2>Contact Me</h2>
+  <form id="contact-form" novalidate>
+    <label for="name">Name</label>
+    <input
+      type="text"
+      id="name"
+      name="user_name"
+      placeholder="Your full name"
+      required
+      autocomplete="name"
+    >
+
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      name="user_email"
+      placeholder="you@example.com"
+      required
+      autocomplete="email"
+    >
+
+    <label for="subject">Subject</label>
+    <input
+      type="text"
+      id="subject"
+      name="subject"
+      placeholder="Subject of your message"
+      required
+    >
+
+    <label for="message">Message</label>
+    <textarea
+      id="message"
+      name="message"
+      rows="5"
+      placeholder="Write your message here…"
+      required
+    ></textarea>
+
+    <button type="submit" id="submit-btn" aria-live="polite" aria-busy="false">
+      <span class="btn-text">Send Message</span>
+      <span class="btn-loader" aria-hidden="true"></span>
+    </button>
+
+    <p id="form-feedback" role="alert" aria-live="assertive"></p>
+  </form>
+</section>
+
+
+<footer class="footer reveal">
+  <div class="footer-container">
+    <div class="footer-about">
+      <span class="footer-logo">★</span>
+      <p>Crafting innovative web solutions &amp; digital experiences.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-socials">
+      <h4>Follow Me</h4>
       <div class="social-icons">
-        <a href="https://www.instagram.com/iam_coder_pandey_jii/" target="_blank">
-          <img src="./instagram.png" alt="Instagram" />
+        <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub" rel="noopener noreferrer">
+          <svg><!-- GitHub SVG icon here --></svg>
         </a>
-        <a href="https://www.instagram.com/cyb.ersquard/" target="_blank">
-          <img src="./instagram.png" alt="Instagram" />
+        <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer">
+          <svg><!-- LinkedIn SVG icon here --></svg>
         </a>
-        <a href="https://www.youtube.com/@CyberSquard" target="_blank">
-          <img src="./youtube.png" alt="YouTube" />
+        <a href="mailto:you@example.com" aria-label="Email">
+          <svg><!-- Email SVG icon here --></svg>
         </a>
       </div>
     </div>
-  </footer>
 
-  <!-- EmailJS SDK -->
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    (function () {
-      emailjs.init("zbdu6gmeHeLlloj9f"); // Your Public Key
-    })();
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>Email: <a href="mailto:info.bhaskerpandey@gmail.com">info.bhaskerpandey@gmail.com</a></p>
+      <p>Phone: +91 8429637626</p>
+    </div>
+  </div>
 
-    const form = document.getElementById("contact-form");
-    const toast = document.getElementById("toast");
+  <div class="footer-bottom">
+    <p>&copy; 2025 Bhasker Pandey &mdash; Web Developer & Cloud Engineer</p>
+  </div>
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+  <button id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
+</footer>
 
-      emailjs.sendForm("service_kmv779h", "template_6tls0ks", this)
-        .then(() => {
-          toast.style.display = "block";
-          setTimeout(() => {
-            toast.style.display = "none";
-          }, 3000);
-          form.reset();
-        })
-        .catch((error) => {
-          alert("Something went wrong. Please try again.");
-          console.error("EmailJS Error:", error);
-        });
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+  // Animate counters in hero section
+  function animateCount(id, target) {
+    let el = document.getElementById(id);
+    let n = 0;
+    let interval = setInterval(() => {
+      if (n < target) {
+        n++;
+        el.textContent = n;
+      } else {
+        clearInterval(interval);
+      }
+    }, 70); // Adjust speed here
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    animateCount('exp-year', 3);
+    animateCount('proj-num', 6);
+  });
+
+  // Sticky header on scroll
+  window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {  // Threshold to trigger sticky header
+      header.classList.add('sticky');
+    } else {
+      header.classList.remove('sticky');
+    }
+  });
+
+  // Initialize EmailJS with your Public Key (replace with your real key)
+  emailjs.init('zbdu6gmeHeLlloj9f');
+
+  // Contact form handling
+  const btn = document.querySelector('#contact button[type="submit"]');
+  const form = document.querySelector('#contact form');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    const serviceID = 'your_actual_service_id'; // Your EmailJS service ID - REPLACE
+    const templateID = 'template_xbtksyg';      // Your EmailJS template ID - REPLACE
+
+    emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+        alert('Email sent successfully!');
+        form.reset();
+      }, (err) => {
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+        alert('Failed to send email:\n' + JSON.stringify(err));
+      });
+  });
+
+  // Smooth scroll for navigation links with anchors
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetID = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetID);
+        if (targetElement) {
+          window.scroll({
+            top: targetElement.offsetTop - 60, // Offset for fixed header height
+            behavior: 'smooth'
+          });
+        }
+      });
     });
-  </script>
-</body>
+  });
 
+  // Intersection Observer for reveal animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.18 });
+
+  // Attach observer to all elements with class 'reveal'
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  });
+
+  // Back to top button functionality
+  const backToTopBtn = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.classList.add('show');
+  } else {
+    backToTopBtn.classList.remove('show');
+  }
+});
+
+backToTopBtn.addEventListener('click', () => {
+  window.scroll({ top: 0, behavior: 'smooth' });
+});
+
+</script>
+ <script src="//code.tidio.co/ure8agjkhlz6awhozaeslglbxnxnfsqi.js" async></script>
+</body>
 </html>
